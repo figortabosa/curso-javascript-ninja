@@ -95,7 +95,7 @@ Crie uma função com as seguintes características:
 ?
 ```
     /* RESUTADOS */
-teste3(); /* false */
-teste3(10); /* 10 */
-teste3(10,10); /* 20 */
-teste3(2,2,2); /* 2 */
+teste3();        // false 
+teste3(10);      // 10 
+teste3(10,10);   // 20 
+teste3(2,2,2);   // 2
