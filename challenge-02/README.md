@@ -77,8 +77,25 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+> function teste3(x, y, z){
+... var res1 = x + y;
+... var res2 = (x + y) / z;
+... if(x == null && y == null & z == null){
+..... return false;
+..... }else if(y == null && z == null){
+..... return x;
+..... }else if(z == null){
+..... return res1;
+..... }else{
+..... return res2;
+..... }
+... }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 ?
 ```
+    /* RESUTADOS */
+teste3(); /* false */
+teste3(10); /* 10 */
+teste3(10,10); /* 20 */
+teste3(2,2,2); /* 2 */
