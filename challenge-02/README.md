@@ -31,13 +31,13 @@ Onde VALOR é o novo valor da variável.
 ... }
 
 // Invoque a função criada acima.
-adiciona2();
+adiciona2(20);
 
 // Qual o retorno da função? (Use comentários de bloco).
 
 /* O valor retornado será o valor que esta dentro do parametro 
 concatenado com a string que esta dentro do bloco de codico ou seja o retorno será:
- O valor da variavel igor é + "valor informado no parametro ao chamar a função" */
+ O valor da variavel igor é 20 */
 
 /*
 Crie uma função com as seguintes características:
@@ -46,19 +46,27 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
+
+> function multiplica5(x, y, z){
+... var res = x * y * z + 2;
+... if(x == null || y == null || z == null){
+..... return " Preencha os valores corretamente ";
+..... }else{
+..... return res;
+..... }
+... }
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+multiplica5(2, 2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+/* Preencha os valores corretamente */
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+multiplica5(2, 2, 2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// 10
 
 /*
 Crie uma função com as seguintes características:
