@@ -24,13 +24,20 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-?
+
+> function adiciona2(y){
+... igor = y
+... return " O valor da variavel " + "igor é " + igor;
+... }
 
 // Invoque a função criada acima.
-?
+adiciona2();
 
 // Qual o retorno da função? (Use comentários de bloco).
-?
+
+/* O valor retornado será o valor que esta dentro do parametro 
+concatenado com a string que esta dentro do bloco de codico ou seja o retorno será:
+ O valor da variavel igor é + "valor informado no parametro ao chamar a função" */
 
 /*
 Crie uma função com as seguintes características:
