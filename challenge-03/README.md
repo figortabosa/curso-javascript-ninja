@@ -53,7 +53,7 @@ pessoa2.andando = false;
 /*
 Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
-*/
+
 pessoa2.nomeCompleto = function() {
 return "Ola, Meu nome é " + pessoa2.nome + " " + pessoa2.sobrenome;
 }
@@ -62,49 +62,57 @@ return "Ola, Meu nome é " + pessoa2.nome + " " + pessoa2.sobrenome;
 Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
 */
-?
+pessoa2.mostrarIdade = function() {
+... return "Ola, eu tenho "+ " " + pessoa2.idade + " " + "anos!";
+... } 
 
 /*
 Crie um método chamado `mostrarPeso`, que retorne a frase:
 - "Eu peso [PESO]Kg."
 */
-?
+pessoa2.mostrarPeso = function() {
+... return  "Eu peso " + pessoa2.peso + "Kg";
+... }
 
 /*
 Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
-?
+pessoa2.mostrarAltura = function() {
+... return "Minha altura é " + pessoa2.altura + "m";
+... }
 
 /*
 Agora vamos brincar um pouco com o objeto criado:
 Qual o nome completo da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-?
+pessoa2.nomeCompleto()  // igor tabosa
 
 /*
 Qual a idade da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-?
+pessoa2.mostrarIdade() // Ola eu tenho 30 anos
 
 /*
 Qual o peso da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-?
+ pessoa2.mostrarPeso(); // 'Eu peso 75Kg'
 
 /*
 Qual a altura da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-?
+pessoa2.mostrarAltura(); //'Minha altura é 1.75m'
 
 /*
 Faça a `pessoa` fazer 3 aniversários.
 */
-?
+pessoa2.aniversario()
+pessoa2.aniversario()
+pessoa2.aniversario()
 
 /*
 Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
