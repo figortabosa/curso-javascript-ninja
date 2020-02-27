@@ -119,36 +119,38 @@ Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
 comentários inline ao lado da instrução para mostrar qual foi a resposta
 retornada)
 */
-?
+pessoa2.aniversario // possui 33 anos
 
 /*
 Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
 com metragens diferentes passadas por parâmetro.
 */
-?
+pessoa2.andar(2);
+pessoa2.andar(3);
+pessoa2.andar(1);
 
 /*
 A pessoa ainda está andando? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-?
+// sim, a pessoa ainda esta andando
 
 /*
 Se a pessoa ainda está andando, faça-a parar.
 */
-?
+pessoa2.para();
 
 /*
 E agora: a pessoa ainda está andando? (Use uma instrução para responder e
 comentários inline ao lado da instrução para mostrar a resposta retornada)
 */
-?
+pessoa2.andando false // a pessoa não esta mais andando
 
 /*
 Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
 inline ao lado da instrução para mostrar a resposta retornada)
 */
-?
+//pessoa2 andou 6 metros
 
 /*
 Agora vamos deixar a brincadeira um pouco mais divertida! :D
