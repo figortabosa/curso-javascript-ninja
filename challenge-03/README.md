@@ -169,8 +169,22 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-?
+ pessoa2.apresentacao = function() {
+... if(pessoa2.sexo === "feminino"){
+..... x = "Ola, eu sou a " + pessoa2.nome + pessoa2.sobrenome;
+..... }else{
+..... x = " Ola, eu sou o " + pessoa2.nome + pessoa2.sobrenome;}
+... if(pessoa2.idade > 1) {
+..... y = " tenho " + pessoa2.idade + " anos" + " altura "+ pessoa2.altura + " meu peso é "+ pessoa2.peso;
+..... }else {
+..... y = " tenho " + pessoa2.idade + " ano " + " altura " + pessoa2.altura + " meu peso é "+ pessoa2.peso}
+... if(pessoa2.caminhouQuantosMetros > 1) {
+..... z = " e so hoje eu caminhei " + pessoa2.caminhouQuantosMetros + " metros;
+z = " e so hoje eu caminhei " + pessoa2.caminhouQuantosMetros + " metro;
+ return x + y + z;
+}
+ }
 
 // Agora, apresente-se ;)
-?
+pessoa2.apresentacao();
 ```
