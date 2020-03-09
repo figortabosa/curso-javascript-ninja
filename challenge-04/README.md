@@ -29,18 +29,31 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `assentos` - Number - cinco por padrão
 - `quantidadePessoas` - Number - zero por padrão
 */
-?
+var carro = {
+    marca: 'fiat',
+    modelo: 'palio',
+    placa: ABC-2233,
+    ano: 2020,
+    cor: 'preto',
+    quantasPortas: 4,
+    assentos: 5,
+    quantidadePeesssoas: 0
+};
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-?
+carro.mudarCor = function(cor) {
+    carro.cor = cor;
+}
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-?
+carro.obterCor = function() {
+    return carro.cor;
+};
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
@@ -75,7 +88,10 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-?
+carro.adicionarPessoas = function(pessoas){
+    carro.quantidadePessoas += pessoas;
+    return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!'
+};
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
