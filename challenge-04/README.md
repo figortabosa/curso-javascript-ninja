@@ -32,12 +32,12 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 var carro = {
     marca: 'fiat',
     modelo: 'palio',
-    placa: ABC-2233,
+    placa: 'ABC-2233',
     ano: 2020,
     cor: 'preto',
     quantasPortas: 4,
     assentos: 5,
-    quantidadePeesssoas: 0
+    quantidadePessoas: 0
 };
 
 /*
@@ -58,19 +58,25 @@ carro.obterCor = function() {
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-?
+carro.obterModelo = function(){
+    return carro.modelo;
+}
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-?
+carro.obterMarca = function(){
+    return carro.Marca;
+}
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-?
+carro.obterMarcaModelo = function(){
+    return 'Esse carro é um ' + carro.marca + ' ' + carro.modelo ;
+}
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
@@ -89,50 +95,60 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 citado acima, no lugar de "pessoas".
 */
 carro.adicionarPessoas = function(pessoas){
+    var totalPessoas = carro.quantidadePessoas + pessoas;
+    var vagas = carro.assentos - carro.quantidadePessoas;
+
+    if(pessoas > vagas){
+        var pessoaPluralSingular = vagas === 1 ? ' pessoa' : ' pessoas';
+        return 'Só cabem mais ' + vagas + pessoaPluralSingular;
+    }
+    if(totalPessoas > carro.assentos) {
+        return 'O carro ja esta lotado'
+    };
     carro.quantidadePessoas += pessoas;
-    return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!'
+    return 'Já temos ' + totalPessoas + ' pessoas no carro!';
 };
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
 utilize sempre o formato de invocação do método (ou chamada da propriedade),
-adicionando comentários _inline_ ao lado com o valor retornado, se o método
+adicionando comentários _inline_ ao lado com o valor retornado, se o métodoif
 retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.obterCor()
 
 // Mude a cor do carro para vermelho.
-?
+carro.mudarCor('vermelho'); // vermelho
 
 // E agora, qual a cor do carro?
-?
+vermelho
 
 // Mude a cor do carro para verde musgo.
-?
+carro.mudarCor('verde musgo');
 
 // E agora, qual a cor do carro?
-?
+verde musgo
 
 // Qual a marca e modelo do carro?
-?
+carro.obterMarcaModelo() // Esse carro é um fiat palio"
 
 // Adicione 2 pessoas no carro.
-?
+carro.adicionarPessoas(2);
 
 // Adicione mais 4 pessoas no carro.
-?
+carro.adicionarPessoas(4); // "Só cabem mais 3 pessoas"
 
 // Faça o carro encher.
-?
+carro.adicionarPessoas(3); // "Já temos 5 pessoas no carro!
 
 // Tire 4 pessoas do carro.
-?
+carro.adicionarPessoas(-4); // Já temos 1 pessoas no carro!"
 
 // Adicione 10 pessoas no carro.
-?
+carro.adicionarPessoas(10); // "Só cabem mais 4 pessoas"
 
 // Quantas pessoas temos no carro?
-?
+carro.quantidadePessoas; // Já temos 1 pessoas no carro!"
 ```
