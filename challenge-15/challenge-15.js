@@ -21,7 +21,22 @@ as seguintes características:
   adicionados à idade original (age). Esse método deverá retornar o objeto
   que será instanciado.
 */
-// ?
+function Person(name, lastName, age) {
+			this.name = name;
+			this.lastName = lastName;
+			this.age = age;
+			this.getFullName = function getFullName(name, lastName) {
+					return this.name + ' ' + this.lastName;
+				};	
+			this.getAge = function getAge() {
+				return this.age;
+			};
+
+			this.addAge = function addAge(add) {
+					return this.addAge += arguments[0];
+					return this;
+			};	
+}
 
 /*
 Crie 3 novos objetos usando o construtor acima. Os objetos serão novas
@@ -30,20 +45,40 @@ parâmetros corretamente para o construtor para criar as novas pessoas.
 Mostre as 3 novas pessoas criadas no console (Um console.log por pessoa).
 */
 console.log( 'Novas pessoas criadas à partir de Person:' );
-// ?
+var jose = new Person('joao', 'silva', '22');
+			var marcos = new Person('marcos', 'castro', '25');
+			var lucio = new Person('lucio', 'santos', '28');
 
+      console.log(jose);
+			console.log(marcos);
+			console.log(lucio);
+      
 /*
 Mostre no console o nome completo de cada pessoa.
 */
 console.log( '\nNomes das pessoas:' );
-// ?
+
+> jose.getFullName();
+'joao silva'
+> marcos.getFullName();
+'marcos castro'
+> lucio.getFullName();
+'lucio santos'      
 
 /*
 Mostre no console as idades de cada pessoa, com a frase:
 - "[NOME COMPLETO] tem [IDADE] anos."
 */
 console.log( '\nIdade das pessoas:' );
-// ?
+
+> jose.getFullName() + ' tem ' + jose.getAge() + ' anos';
+'joao silva tem 22 anos'
+
+> marcos.getFullName() + ' tem ' + marcos.getAge() + ' anos';
+'marcos castro tem 25 anos'
+
+> lucio.getFullName() + ' tem ' + lucio.getAge() + ' anos';
+'lucio santos tem 28 anos'
 
 /*
 Adicione alguns anos à cada pessoa, e mostre no console a nova idade de
@@ -51,4 +86,4 @@ cada um. A frase deverá ser no formato:
 - "[NOME COMPLETO] agora tem [NOVA IDADE] anos."
 */
 console.log( '\nNova idade das pessoas:' );
-// ?
+jose.getFullName() + 'agora tem ' + jose.addAge(10).getAge() + ' anos.';
